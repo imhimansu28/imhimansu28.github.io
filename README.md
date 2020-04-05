@@ -1,1 +1,1 @@
-# [Portfolio](https://www.imhimansu28.github.io)
+# [Portfolio](https://imhimansu28.github.io)
