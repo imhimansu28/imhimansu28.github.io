@@ -1,0 +1,316 @@
+/*
+ font-family: 'B612 Mono', monospace;
+ font-family: 'Sacramento', cursive;
+font-family: 'Arvo', serif;
+font-family: 'Baskervville', serif;*/
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0 auto;
+  background-color: white;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(#f76e23, rgba(255, 255, 255, 0.15) 4px, transparent 30px),
+    radial-gradient(#f76e32, rgba(255, 255, 255, 0.1) 5px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+.container {
+  padding: 10px;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.logo > img {
+  border-radius: 50%;
+  border: 1px soild black;
+
+}
+.head {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem auto;
+  color: #fd6721;
+  font-family: "Arvo", serif;
+  font-weight: lighter;
+}
+.img {
+  display: flex;
+  justify-content: center;
+}
+.bgimg {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+/* about-section */
+
+hr {
+  border: 2px solid #fd6721;
+  width: 100px;
+}
+.about {
+  height: 100%;
+  padding: 50px;
+}
+.dark {
+  background-color: #f2f2f2;
+}
+.heading {
+  margin: 1rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-family: "Baskervville", serif;
+  color: #fd6721;
+  font-weight: lighter;
+}
+.text {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  line-height: 1.8em;
+  color: #333;
+  font-size: 1.5em;
+}
+
+
+/* skils section */
+.myskils {
+  height: 70%;
+  width: auto;
+  padding: 50px;
+  background-color: white;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(#f76e23, rgba(255, 255, 255, 0.15) 4px, transparent 30px),
+    radial-gradient(#f76e32, rgba(255, 255, 255, 0.1) 5px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.skils {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  background: #fafafa;
+  margin: 1rem auto;
+  padding: 22px;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #f2f2fa;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px 0px #fcfcfc;
+}
+span {
+  border-radius: 100%;
+}
+.child-box {
+  display: hidden;
+  margin: 1rem auto;
+  padding: 20px;
+  display: block;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+}
+h3 {
+  display: flex;
+  color: #999;
+  justify-content: center;
+  font-family: "Baskervville", serif;
+}
+
+/*Project Section*/
+.project-section {
+  height: 70%;
+  padding: 50px;
+}
+
+.project {
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.box-2 {
+  margin: 10px auto;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px auto;
+}
+button {
+  background: #fafafa;
+  padding: 0.5rem;
+  width: 200px;
+  font-family: "B612 Mono", monospace;
+  border: 2px solid #fd6721;
+  border-radius: 3px;
+  color: #fd6721;
+}
+button:hover {
+  background-color: #f76e32;
+  color: #fafaf2;
+  border: 2px solid #fd6721;
+  transition: 0.8s all ease-in-out;
+}
+
+/*Contact_US*/
+
+.contact-section {
+  height: 100%;
+  padding: 50px;
+  background-color: white;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(#f76e23, rgba(255, 255, 255, 0.15) 4px, transparent 30px),
+    radial-gradient(#f76e32, rgba(255, 255, 255, 0.1) 5px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+.box-3 {
+  text-align: center;
+  margin: 20px  auto;
+  padding: 50px;
+}
+input[type="submit"] {
+  background: #fd6721;
+  padding: 0.5rem;
+  width: 160px;
+  font-family: "B612 Mono", monospace;
+  border: 2px solid #fafaf2;
+  border-radius: 5px;
+  color: #f2f2fa;
+  text-transform: uppercase;
+  z-index: 1020;
+  font-family: "EB Garamond", serif;
+}
+input[type="submit"]:hover {
+  background-color: #fafaf2;
+  color: #f76e32;
+  border: 2px solid #f76e32;
+  transition: 0.8s all ease-in-out;
+}
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #3a1400;
+  color: #333;
+  font-family: "EB Garamond", serif;
+}
+textarea {
+  width: 100%;
+  border: 1px solid #3a1400;
+  color: slategrey;
+  font-family: "EB Garamond", serif;
+}
+::placeholder{
+  font-family: "EB Garamond", serif;
+  color: #444;
+  text-transform:capitalize;
+  font-size: 1.2em;
+
+}
+
+/* footer */
+
+footer {
+  padding: 2rem;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+.box-f{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  float: center;
+}
+li {
+  list-style: none;
+  margin: auto 1vw;
+  text-align: center;
+}
+.f-text {
+  color: #fafafa;
+  text-align: center;
+}
+i{
+  color: white;
+}
+
+@media only screen and (max-width: 580px) {
+  .box-3 {
+    padding: 2px;
+    margin: 3px auto;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  .text {
+    font-size: 1.1em;
+  }
+}
+
