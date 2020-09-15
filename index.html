@@ -1,155 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css?family=Arvo|Baskervville|EB+Garamond|Sacramento&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Himanshu Gupta</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Himanshu</span><br> Python Django <br> Developer</h1>
+
+                    <a href="#contact" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/himanshu-gupta-033793188/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://instagram.com/coding_with_coffee" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://github.com/imhimansu28" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">    
+                    <img src="assets/img/perfil.png" alt="">
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Himanshu</h2>
+                        <p class="about__text">I have a large interest in programming and i enjoy applying my skills to my personal projects. Full stack development. I am now 21 years old and I am still very passionate about programming. I enjoy front-end development very much because of the freedom I have to build UIs that carry high quality user experiences. I also am very fond of complex backend systems that require critical thinking skills and logic.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">55%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-terminal skills__icon'></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-layout skills__icon'></i>
+                                <span class="skills__name">Python Django</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
+
+                <div class="work__container bd-grid">
+                    <div class="work__img">
+                        <img src="assets/img/work1.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work2.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work3.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work4.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work5.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work6.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Himanshu</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/imhimanshu28" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/imhimanshu28" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/imhimansu28" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p>&#169; 2020 copyright all right reserved</p>
+        </footer>
 
 
-    <link rel="stylesheet" href="/Css/style.css" />
-   
-    <title>Himanshu Gupta</title>
-    <link rel="shortcut icon" href="img/icons8-user-100.png" type="image/x-icon">
-  </head>
-  <body>
-    <div class="circle">
-      <div class="logo">
-        <img src="/img/Himanshu.jpg" alt="Himanshu" width="160" height="auto" class="logo-img">
-      </div>
-    </div>
-    <div class="head">
-      <h1>Himanshu Gupta</h1>
-    </div>
-    <div class="img">
-      <span
-        ><img class="bgimg"
-          src="/img/undraw_laravel_and_vue_59tp.jpg"
-          alt=""
-          width="100%"
-          height="auto"
-      /></span>
-    </div>
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-    <section class="about dark">
-      <div class="container">
-        <h1 class="heading">
-          About us
-        </h1>
-        <hr />
-        <p class="text text-appear">
-          I have a large interest in programming and i enjoy applying my skills to my personal projects. 
-          Full stack development. I am now 21 years old and I am still very passionate about programming.
-           I enjoy front-end development very much because of the freedom I have to build UIs that carry high quality user experiences.
-           I also am very fond of complex backend systems that require critical thinking skills and logic.
-        </p>
-      </div>
-    </section>
-
-    <section class="myskils light">
-      <div class="container">
-        <h1 class="heading">
-          My Skils
-        </h1>
-        <hr />
-        <div class="skils">
-          <div class="box">
-           <span><img src="/img/java-logo-7.jpg" alt="" width="200px" height="auto"></span> 
-            <div class="child-box">
-              <h3> Core Java  </h3>
-            </div>
-          </div>
-
-          <div class="box">
-            <span><img src="/img/1024px-Python-logo-notext.svg.png" alt=" " width="200px" height="auto"></span> 
-            <div class="child-box">
-              <h3> Python 3.7 </h3>
-            </div>
-          </div>
-          <div class="box">
-           <span> <img src="/img/images.png" alt="" width="200px" height="auto"></span> 
-            <div class="child-box">
-              <h3> Web development </h3>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    <section class="project-section dark">
-      <div class="container">
-          <h1 class="heading">
-              Our Project
-            </h1>
-            <hr />
-            <div class="project row">
-              <div class="box-2 col-lg-6 col-sm-12">
-              <img src="/project/img/cool-background (1).png" alt="" width="100%" height="auto">
-              </div>
-              <div class="box-2 col-lg-6 col-sm-12">
-              <img src="project/img/cool-background (6).png" alt="" width="100%" height="auto">
-              </div>
-            </div>
-      </div>
-      <div class="button">
-       <a href="project.html"> <button>More Project</button></a>
-      </div>
-    </section>
-    <section class="contact-section light">
-      <div class="container">
-          <h1 class="heading">
-            Contact
-            </h1>
-            <hr />
-        <div class="row">
-          <div class="col-lg-6 col-sm-12 col-md-6">
-            <img src="/img/undraw_personal_text_vkd8.png" alt="" width="100%" height="auto">
-          </div>
-          <div class="col-lg-6 col-sm-12 col-md-6">
-            <div class="box-3">
-              <form action="https://getform.io/f/8d367dcc-69a7-4f34-a882-3fda1230f40a" method="POST" enctype="multipart/form-data">
-                 
-                <input type="email"  name="Email"   placeholder="Enter email" required> 
-                <br><br>
-                <textarea name="msg" id="#" cols="50" rows="3" placeholder="write message here"></textarea>
-                <Br></Br>
-                <input type="Submit" value="Send">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <div class="follow">
-              <div class="box-f">
-              <div class="box-4">
-                <ul>
-                  <li><a href="https://www.facebook.com/imhimanshu28"><img src="/img/021-facebook.png" alt=""width="30" height="auto"></a></li>
-                  <li><a href="https://www.instagram.com/imhimanshu28"><img src="/img/025-instagram.png" alt="" width="30" height="auto"></a></li>
-                  <li><a href="https://twitter.com/imhimansu28"><img src="/img/043-twitter.png" alt="" width="30" height="auto"></a></li>
-                  <li><a href="https://www.linkedin.com/in/himanshu-gupta-033793188"><img src="/img/045-linkedin.png" alt="" width="30" height="auto"></a></li>
-                </ul>
-              </div>
-              <div class="box-4">
-                <p class="f-text">
-                   Website  Create  by Himanshu Gupta 
-                </p>
-              </div>
-            </div>
-    </div>
-    </footer>
-    <script src="/JS/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
