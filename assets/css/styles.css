@@ -58,6 +58,19 @@ body{
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
+
+body::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(82, 9, 253, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: rgb(70, 39, 245);
+outline: 1px solid rgba(100, 4, 255, 0.76);
+}
 h1,h2,p{
   margin: 0;
 }
@@ -117,7 +130,8 @@ img{
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  box-shadow:  5px 5px 14px #787878,
+             -5px -5px 14px #ffffff;
 }
 
 /*===== NAV =====*/
@@ -195,6 +209,8 @@ img{
 .home__title{
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
+  text-shadow: -6px 6px 15px rgba(0,0,0,0.), 
+            6px -6px 15px rgba(255, 255, 255, 0.671);
 }
 .home__title-color{
   color: var(--first-color);
@@ -217,6 +233,7 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
+ 
 }
 
 /*BUTTONS*/
@@ -226,13 +243,20 @@ img{
   color: #fff;
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
-  border-radius: .5rem;
+  border-radius: 25px;
+  box-shadow: inset 6px 6px 46px #271a64,
+            inset -6px -6px 46px #9162ff;
 }
 .button:hover{
-  box-shadow: 0 10px 36px rgba(0,0,0,.15);
+
+box-shadow:  24px -24px 28px #422dab1e;
 }
 
 /* ===== ABOUT =====*/
+#about{
+  box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.2),
+    inset 8px 8px 8px rgba(255, 255, 255, 0.4);
+}
 .about__container{
   row-gap: 2rem;
   text-align: center;
@@ -242,13 +266,20 @@ img{
 }
 .about__img{
   justify-self: center;
+  box-shadow:  5px 5px 10px #a0a0a0,
+  -5px -5px 10px #ffffff;
 }
 .about__img img{
   width: 200px;
   border-radius: .5rem;
+
 }
 
 /* ===== SKILLS =====*/
+#skills{
+  box-shadow:  5px 5px 10px #c6c6c6,
+  -5px -5px 10px #ffffff;
+}
 .skills__container{
   row-gap: 2rem;
   text-align: center;
@@ -328,9 +359,16 @@ img{
   font-weight: var(--font-semi);
   padding: 1rem;
   border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
+
+  /* border: 1.5px solid var(--second-color); */
   outline: none;
   margin-bottom: var(--mb-4);
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
+}
+input , textarea{
+  border: 0px;
+  background-color: #fafafa;
 }
 .contact__button{
   display: block;
@@ -348,6 +386,8 @@ img{
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  box-shadow: inset -5px -5px 10px #060f14,
+            inset 5px 5px 10px #16394e;
 }
 .footer__title{
   font-size: 2rem;
