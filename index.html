@@ -10,47 +10,12 @@
     <script defer data-domain="imhimansu28.github.io" src="https://plausible.io/js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Himanshu Gupta</title>
 </head>
 
 <body>
-    <div class="container">
-
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-bg">
-            <a class="navbar-brand" href="">
-                <h5><span>Himanshu</span> Gupta</h5>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarCollapse">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> <br> <b>Home</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> <br>
-                            <b>About</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-laptop-code"></i> <br> <b>Work</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> <i class="fas fa-project-diagram    "></i> <br> <b>Project</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> <i class="fa fa-file" aria-hidden="true"></i> <br>
-                            <b>Resume</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> <i class="fas fa-phone-volume  "></i><br><b> Contact</b></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
     <section>
         <div class="container">
             <div class="row mt-5 d-flex align-item-center">
@@ -62,6 +27,7 @@
                                 <br>
                                 I am <span class="name">Python Django</span> <br> Developer <code><\></code>
                             </h1>
+                             <button onclick="downloadPDF()">Download PDF</button>
                         </div>
                     </div>
                 </div>
@@ -234,6 +200,18 @@
         party.confetti(runButton, {
             count: party.variation.range(10, 1000),
         });
+        function downloadPDF() {
+            const element = document.querySelector('body');
+            const options = {
+                margin: [0, 0, 0, 0],
+                filename: 'page.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            html2pdf().set(options).from(element).save();
+        }
     </script>
 </body>
 
