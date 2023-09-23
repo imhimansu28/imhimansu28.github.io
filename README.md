@@ -15,17 +15,17 @@ Hello there! I'm Himanshu Gupta, a passionate Software Developer with 3 years of
 ## Work and Experience
 
 ### Mittal Analytics Co. - Software Developer
-- **Period:** February 2022 - Present
+- **Period:** April 2022 - Present
 - A reputable company specializing in data analytics solutions.
 - Responsibilities include: Frontend and Backend Development, Database Management, and collaborating on various projects to deliver robust software solutions.
 
 ### Global-web Infotech - Web Developer
-- **Period:** August 2021 - January 2022
+- **Period:** August 2021 - April 2022
 - A leading Software Development Company
 - Responsibilities include: Frontend and Backend Development
 
 ### ScimoX Product - Internship Training Program
-- **Period:** January 2020 - December 2020
+- **Period:** January 2020 - March 2021
 - Python Django Framework
 - Completed 10 Projects during the training program
 
