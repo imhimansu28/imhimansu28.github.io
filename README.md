@@ -1,5 +1,5 @@
 # Himanshu Gupta
-![Cover Image](/uploads/Untitled.png)
+![Cover Image](/assets/cover.png)
 
 # Introduction
 Hello there! I'm Himanshu Gupta, a passionate Software Developer with 3 years of hands-on experience. My journey began with a Diploma in Computer Science, and since then, I've been on a thrilling ride in the tech world. My expertise lies in crafting both static and dynamic websites, utilizing the power of Python and the Django framework. I take immense pride in delivering top-notch solutions, prioritizing client satisfaction at every step. As a young and inquisitive developer, I thrive on embracing cutting-edge technologies, constantly pushing the boundaries, and expanding my skill set.
