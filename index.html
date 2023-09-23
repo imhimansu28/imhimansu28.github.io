@@ -1,219 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <meta name="google-site-verification" content="_lJQcpegwEW8SqKhMdITGo3PQbcL94uyQttgMhq0-xM" />
-    <script defer data-domain="imhimansu28.github.io" src="https://plausible.io/js/script.js"></script>
-    <script defer data-domain="imhimansu28.github.io" src="http://localhost:8080/js/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="A passionate and dedicated Software Developer with over 1.4 years of experience in the industry. I hold a Diploma degree in Computer Science and specialize in building websites, both static and dynamic, with expertise in Python and the Django framework. My focus is on delivering high-quality solutions and ensuring my clients' satisfaction throughout the development process. As a young and curious developer, I am always eager to explore cutting-edge technologies, constantly innovating, and continuously expanding my skill set."
+    />
+    <meta name="author" content="Himanshu Gupta- Software Developer" />
     <title>Himanshu Gupta</title>
-</head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <section>
-        <div class="container">
-            <div class="row mt-5 d-flex align-item-center">
-                <div class="col-md-7">
-                    <div class="content">
-                        <div class="large-text">
-                            <h1 class="display-4">
-                                Hello My Self <br> <span class="name">Himanshu Gupta</span>
-                                <br>
-                                I am <span class="name">Python Django</span> <br> Developer <code><\></code>
-                            </h1>
-                             <button onclick="downloadPDF()">Download PDF</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="content">
-                        <img src="assets/img/programmer.svg" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+          <a class="navbar-brand" href="index.html"
+            ><span class="fw-bolder text-primary">Himanshu Gupta</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resume.html">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
-    <section id="about" class="about">
-        <div class="container">
-            <div class="content-header py-3">
-                <h4>About Us </h4>
-                <hr>
-            </div>
-            <div class="row py-3 d-flex align-items-center">
-                <div class="col-md-4 text-center">
-                    <div class="content-img">
-                        <img src="assets/img/path.png" alt="" class="img-fluid">
-                    </div>
+      </nav>
+      <!-- Header-->
+      <header class="py-5">
+        <div class="container px-5 pb-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-xxl-5">
+              <!-- Header text content-->
+              <div class="text-center text-xxl-start">
+                <div
+                  class="badge bg-gradient-primary-to-secondary text-white mb-4"
+                >
+                  <div class="text-uppercase">Software - Engineer</div>
                 </div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <h5>I'am Himanshu</h5>
-                            <p class="text-justify">
-                                I am a Full stack developer with Diploma degree in computer science. I build websites,
-                                static and dynamic, manage databases and most importantly,
-                                never leave my clients hanging. Being a young and curious developer, I am always working
-                                on cutting-edge technologies and constantly innovating and learning new stuff. This also
-                                allows me to use the best technologies suited to a particular project requirement.</p>
-                        </div>
-                        <div class="col-md-7">
-                            <h5>Personal Details</h5>
-                            <ul class="peronal details d-block">
-                                <li><b> <i class="icons fa fa-birthday-cake" aria-hidden="true"></i> Birthday: </b>
-                                    28-Dec-2000</li>
-                                <li><b> <i class="icons fa fa-globe" aria-hidden="true"></i> Website: </b>
-                                    imhimansu28.github.io</li>
-                                <li><b> <i class="icons fa fa-envelope" aria-hidden="true"></i> E-mail:</b>
-                                    webdevhimanshu@gmail.com</li>
-                                <li><b> <i class="icons fa fa-map-marker" aria-hidden="true"></i> Home Town:</b>
-                                    Lucknow, Uttar Pradesh</li>
-                                <li><b> <i class="icons fa fa-graduation-cap" aria-hidden="true"></i> Degree:</b>
-                                    Diploma In Computer Science </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="work" id="work">
-        <div class="container">
-            <div class="content-header py-3">
-                <h4>Work and My Experience</h4>
-                <hr>
-            </div>
-            <div class="timeline">
-                <div class="timeline-row">
-                    <div class="timeline-time">
-                        20/AUG/2021<small>Present</small>
-                    </div>
-                    <div class="timeline-content">
-                        <i class="icon-attachment"></i>
-                        <h4>Global-web Infotech</h4>
-                        <p> A leading Software Development Company.<br> My Position is Web Developer</p>
+                <h1 class="display-3 fw-bolder mb-2">
+                  <span class="text-gradient d-inline">Himanhu Gupta</span>
+                </h1>
 
-                        <div class="">
-                            <span class="badge badge-pill p-2">Forntend</span>
-                            <span class="badge badge-pill p-2">Backend</span>
-                        </div>
-                    </div>
+                <div
+                  class="d-flex justify-content-md-start justify-content-sm-center align-items-center mb-3 fs-1 fw-bolder"
+                >
+                  <a
+                    href="https://github.com/imhimansu28"
+                    class="m-2 text-gradient d-inline"
+                    ><i class="text-gradient bi bi-github"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/himanshu-gupta-033793188/"
+                    class="m-2 text-gradient d-inline"
+                  >
+                    <i class="text-gradient bi bi-linkedin"></i
+                  ></a>
+                  <a href="https://www.facebook.com/imhimanshu28/" class="m-2 text-gradient d-inline"
+                    ><i class="text-gradient bi bi-facebook"></i
+                  ></a>
+                  <a href="https://www.instagram.com/imhimanshu28/" class="m-2 text-gradient d-inline"
+                    ><i class="text-gradient bi bi-instagram"></i
+                  ></a>
+                  <a href="https://www.twitter.com/imhimansu28/" class="m-2 text-gradient d-inline"
+                    ><i class="text-gradient bi bi-x"></i
+                  ></a>
                 </div>
-
-                <div class="timeline-row">
-                    <div class="timeline-time">
-                        15/JAN/2020<small>20/Dec/2020</small>
-                    </div>
-                    <div class="timeline-content">
-                        <i class="icon-code"></i>
-                        <h4>ScimoX Product</h4>
-                        <p>
-                            Intership Training Program Python Django Framework !
-                            Complete 10 Project
-                        </p>
-
-                        <div class="">
-                            <span class="badge badge-pill p-2">Python</span>
-                            <span class="badge badge-pill p-2">Django</span>
-                        </div>
-                    </div>
+                <div
+                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
+                >
+                  <a
+                    class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                    href="resume.html"
+                    >Resume</a
+                  >
+                  <a
+                    class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
+                    href="projects.html"
+                    >Projects</a
+                  >
                 </div>
+              </div>
             </div>
-            <div class="content-header py-3">
-                <h4>Skills</h4>
-                <hr>
-            </div>
-            <div class="skills">
-                <div class="row text-center">
-                    <div class="col-md-2 col-6 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">HTML5</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">CSS3</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">JavaScripts</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Python</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)"> Django</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Gitlab</button></div>
+            <div class="col-xxl-7">
+              <!-- Header profile picture-->
+              <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                <div class="profile bg-gradient-secondary-to-primary">
+                  <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
+                  <!-- Watch a tutorial on how to do this on YouTube (link)-->
+                  <img
+                    class="profile-img"
+                    src="assets/profile-3.png"
+                    alt="..."
+                  />
+                  <div class="dots-1">
+                    <!-- SVG Dots-->
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 191.6 1215.4"
+                      style="enable-background: new 0 0 191.6 1215.4"
+                      xml:space="preserve"
+                    >
+                      <g
+                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                      >
+                        <path
+                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <!-- END of SVG dots-->
+                  </div>
+                  <div class="dots-2">
+                    <!-- SVG Dots-->
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 191.6 1215.4"
+                      style="enable-background: new 0 0 191.6 1215.4"
+                      xml:space="preserve"
+                    >
+                      <g
+                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                      >
+                        <path
+                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <!-- END of SVG dots-->
+                  </div>
+                  <div class="dots-3">
+                    <!-- SVG Dots-->
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 191.6 1215.4"
+                      style="enable-background: new 0 0 191.6 1215.4"
+                      xml:space="preserve"
+                    >
+                      <g
+                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                      >
+                        <path
+                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <!-- END of SVG dots-->
+                  </div>
+                  <div class="dots-4">
+                    <!-- SVG Dots-->
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 191.6 1215.4"
+                      style="enable-background: new 0 0 191.6 1215.4"
+                      xml:space="preserve"
+                    >
+                      <g
+                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                      >
+                        <path
+                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                        ></path>
+                        <path
+                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                        ></path>
+                        <path
+                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                        ></path>
+                        <path
+                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                        ></path>
+                        <path
+                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                        ></path>
+                        <path
+                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                        ></path>
+                        <path
+                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                        ></path>
+                        <path
+                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                        ></path>
+                        <path
+                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                        ></path>
+                        <path
+                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                        ></path>
+                        <path
+                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <!-- END of SVG dots-->
+                  </div>
                 </div>
-                <hr style="opacity: 0;">
-                <div class="row text-center">
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Github</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Deployment</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Linux</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Opps</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">SQL</button></div>
-                    <div class="col-md-2 col-6 py-1"><button class="btn btn-skills button"
-                            onmousedown="party.confetti(this)">Flask</button></div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact">
-                <div class="content-header py-3">
-                    <h4>Contact Us</h4>
-                    <hr>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 py-3 contact-content">
-                        <div class="card contact-card ml-auto mr-auto">
-                            <div class="card-body text-center">
-                                <i class="fab fa-telegram fa-3x mb-4"></i>
-                                <br>
-                                <h5>Email</h5>
-                                <p>webdevhimanshu@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </header>
+      <!-- About Section-->
+      <section class="bg-light py-5">
+        <div class="container px-5">
+          <div class="row gx-5 justify-content-center">
+            <div class="col-xxl-8">
+              <div class="text-center my-5">
+                <h2 class="display-5 fw-bolder">
+                  <span class="text-gradient d-inline">About Me</span>
+                </h2>
+                <p class="text-muted">
+                  A passionate and dedicated Software Developer with over 3
+                  years of experience in the industry. I hold a Diploma degree
+                  in Computer Science and specialize in building websites, both
+                  static and dynamic, with expertise in Python and the Django
+                  framework. My focus is on delivering high-quality solutions
+                  and ensuring my clients' satisfaction throughout the
+                  development process. As a young and curious developer, I am
+                  always eager to explore cutting-edge technologies, constantly
+                  innovating, and continuously expanding my skill set.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small cyan darken-3">
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://imhimansu28.github.io/">Himanshu Gupta</a>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+      <div class="container px-5">
+        <div
+          class="row align-items-center justify-content-between flex-column flex-sm-row"
+        >
+          <div class="text-center">
+            <div class="small m-0">Copyright &copy; Himanshu Gupta - 2023</div>
+          </div>
         </div>
-        <!-- Copyright -->
+      </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-    <script>
-        party.confetti(runButton, {
-            count: party.variation.range(10, 1000),
-        });
-        function downloadPDF() {
-            const element = document.querySelector('body');
-            const options = {
-                margin: [0, 0, 0, 0],
-                filename: 'page.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-
-            html2pdf().set(options).from(element).save();
-        }
-    </script>
-</body>
-
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS->
+  </body>
 </html>

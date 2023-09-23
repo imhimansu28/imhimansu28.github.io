@@ -1,8 +1,0 @@
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-  <defs>
-    <clipPath id="shape">
-      <path id="blob" d="M315.5,353Q131,456,130,248.5Q129,41,314.5,145.5Q500,250,315.5,353Z" fill="#d1d8e0"></path>
-    </clipPath>
-  </defs>
-  <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" xlink:href="https://source.unsplash.com/5PVXkqt2s9k/400x500" preserveAspectRatio="none"></image>
-</svg>
