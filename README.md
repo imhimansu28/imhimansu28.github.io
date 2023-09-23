@@ -1,4 +1,3 @@
-# Himanshu Gupta
 ![Cover Image](/assets/cover.png)
 
 # Introduction
