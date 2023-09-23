@@ -1,17 +1,16 @@
 # Himanshu Gupta
 ![Cover Image](/uploads/Untitled.png)
 
-## Introduction
-
-Hello there! I am Himanshu Gupta, a passionate and dedicated Software Developer with over 2.4 years of experience in the industry. I hold a Diploma degree in Computer Science and specialize in building websites, both static and dynamic, with expertise in Python and the Django framework. My focus is on delivering high-quality solutions and ensuring my clients' satisfaction throughout the development process. As a young and curious developer, I am always eager to explore cutting-edge technologies, constantly innovating, and continuously expanding my skill set.
+# Introduction
+Hello there! I'm Himanshu Gupta, a passionate Software Developer with 3 years of hands-on experience. My journey began with a Diploma in Computer Science, and since then, I've been on a thrilling ride in the tech world. My expertise lies in crafting both static and dynamic websites, utilizing the power of Python and the Django framework. I take immense pride in delivering top-notch solutions, prioritizing client satisfaction at every step. As a young and inquisitive developer, I thrive on embracing cutting-edge technologies, constantly pushing the boundaries, and expanding my skill set.
 
 ## Personal Details
+- 🎂 Birthday: December 28, 2000
+- 🌐 Website: [imhimansu28.github.io](https://imhimansu28.github.io)
+- 📧 E-mail: [webdevhimanshu@gmail.com](mailto:webdevhimanshu@gmail.com)
+- 🏡 Hometown: Lucknow, Uttar Pradesh
+- 🎓 Degree: Diploma in Computer Science
 
-- **Birthday:** 28th December 2000
-- **Website:** [imhimansu28.github.io](https://imhimansu28.github.io)
-- **E-mail:** [webdevhimanshu@gmail.com](mailto:webdevhimanshu@gmail.com)
-- **Home Town:** Lucknow, Uttar Pradesh
-- **Degree:** Diploma in Computer Science
 
 ## Work and Experience
 
