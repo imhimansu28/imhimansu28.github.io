@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Year CS Learning Roadmap</title>
+    <style>
+        :root {
+            --primary: #4f46e5; /* Indigo */
+            --primary-light: #e0e7ff;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-body: #f3f4f6;
+            --bg-slide: #ffffff;
+            --accent: #f59e0b; /* Amber for highlights */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Prevent body scroll in presentation mode */
+        }
+
+        /* --- Layout --- */
+        .presentation-container {
+            width: 90%;
+            max-width: 1000px;
+            height: 85vh;
+            position: relative;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-frame {
+            background-color: var(--bg-slide);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            flex-grow: 1;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Slide Content --- */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease;
+            transform: translateX(20px);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Allow scrolling inside slide if content is long */
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            z-index: 2;
+        }
+
+        /* Scrollbar styling */
+        .slide::-webkit-scrollbar {
+            width: 8px;
+        }
+        .slide::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.5;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .highlight {
+            background-color: var(--primary-light);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eee;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* --- Navigation Controls --- */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+            max-width: 200px;
+        }
+
+        .progress-text {
+            font-weight: bold;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            body { 
+                height: auto; 
+                overflow: visible; 
+                background: white;
+            }
+            .presentation-container {
+                width: 100%;
+                max-width: none;
+                height: auto;
+            }
+            .slide-frame {
+                box-shadow: none;
+                overflow: visible;
+            }
+            .slide {
+                position: relative;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                page-break-after: always;
+                border-bottom: 1px solid #ddd;
+                height: auto;
+                margin-bottom: 50px;
+            }
+            .controls {
+                display: none;
+            }
+        }
+
+        /* --- Mobile Tweaks --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            .slide { padding: 20px; }
+            .controls { flex-direction: column; gap: 10px; border-radius: 12px; }
+            select { max-width: 100%; }
+            .nav-buttons { display: flex; gap: 10px; width: 100%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <div class="slide-frame">
+        
+        <!-- Slide 1: Overview -->
+        <div class="slide active" id="slide-1">
+            <h1>1 Year Computer Science Roadmap</h1>
+            <p style="font-size: 1.2rem; color: #666;">From Absolute Beginner to Internship-Ready</p>
+            
+            <h3>Overview</h3>
+            <ul>
+                <li><strong>Total Duration:</strong> 12 Months</li>
+                <li><strong>Commitment:</strong> 8–12 hours/week (approx. 2 hours/day)</li>
+            </ul>
+
+            <h3>Primary Goals</h3>
+            <ul>
+                <li>Understand computers deeply (Hardware, OS, Networking).</li>
+                <li>Build strong foundations in Programming & Problem Solving.</li>
+                <li>Learn essential CS concepts & Project Management.</li>
+                <li>Become <strong>Internship-Ready</strong> by Month 10–12.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 2: Month 1 -->
+        <div class="slide" id="slide-2">
+            <h2>Month 1: Understanding Computers</h2>
+            <p>Build the foundation before you touch code. Understand the machine.</p>
+
+            <h3>Key Topics</h3>
+            <div>
+                <span class="tag">Hardware Basics (CPU, RAM)</span>
+                <span class="tag">Binary/Hex Systems</span>
+                <span class="tag">OS Overview (Win/Linux)</span>
+                <span class="tag">Files & Processes</span>
+            </div>
+
+            <h3>Exercises</h3>
+            <ul>
+                <li>Open your PC/Laptop (or look up teardowns) to identify components.</li>
+                <li>Practice converting Decimal to Binary manually.</li>
+                <li>Install Ubuntu in VirtualBox and try basic commands.</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Create a visual diagram explaining how a computer works internally.</p>
+        </div>
+
+        <!-- Slide 3: Month 2 -->
+        <div class="slide" id="slide-3">
+            <h2>Month 2: Computer Literacy & Internet</h2>
+            <p>Mastering the tools, networking basics, and staying safe online.</p>
+
+            <h3>Key Topics</h3>
+            <ul>
+                <li><strong>Internet:</strong> DNS, IP Addresses, Routers, Browsers.</li>
+                <li><strong>Security:</strong> Phishing, Encryption, Password Management.</li>
+                <li><strong>Cloud:</strong> Drive, Dropbox, Email Etiquette.</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <p><em>"The Internet Book"</em> by Douglas Comer, Khan Academy Internet 101.</p>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Create a "Beginner’s Guide to Internet Safety" (PDF or simple Google Site).</p>
+        </div>
+
+        <!-- Slide 4: Month 3 -->
+        <div class="slide" id="slide-4">
+            <h2>Month 3: Introduction to Python</h2>
+            <p>Your first steps into logic and coding.</p>
+
+            <h3>Key Topics</h3>
+            <ul>
+                <li>Compilers vs Interpreters.</li>
+                <li>Variables, Data Types, and Operators.</li>
+                <li>Control Flow: Conditionals (`if/else`) and Loops (`for/while`).</li>
+            </ul>
+
+            <h3>Exercises</h3>
+            <ul>
+                <li>Build a calculator script.</li>
+                <li>Create a temperature converter.</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Build a Command Line Personal Expense Tracker.</p>
+        </div>
+
+        <!-- Slide 5: Month 4 -->
+        <div class="slide" id="slide-5">
+            <h2>Month 4: Python Foundations</h2>
+            <p>Data Structures & Problem Solving logic.</p>
+
+            <h3>Key Topics</h3>
+            <div>
+                <span class="tag">Lists & Tuples</span>
+                <span class="tag">Dictionaries & Sets</span>
+                <span class="tag">Functions</span>
+                <span class="tag">Error Handling</span>
+            </div>
+
+            <h3>Algorithmic Thinking</h3>
+            <ul>
+                <li>Basic searching and sorting logic.</li>
+                <li>Practice on HackerRank (Beginner level).</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Student Report Card System (Add, Search, Update records).</p>
+        </div>
+
+        <!-- Slide 6: Month 5 -->
+        <div class="slide" id="slide-6">
+            <h2>Month 5: Core CS Concepts</h2>
+            <p>Going deeper: How software interacts with hardware.</p>
+
+            <h3>Key Topics</h3>
+            <ul>
+                <li><strong>Memory:</strong> Stack vs Heap.</li>
+                <li><strong>OS Internals:</strong> Processes, Threads, Scheduling.</li>
+                <li><strong>Data Structures:</strong> Linked Lists, Stacks, Queues.</li>
+                <li><strong>Big-O:</strong> Basic complexity analysis.</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <p>Neso Academy (YouTube), "Computer Science Illuminated".</p>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Implement a Stack and Queue manually in Python.</p>
+        </div>
+
+        <!-- Slide 7: Month 6 -->
+        <div class="slide" id="slide-7">
+            <h2>Month 6: Databases & SQL</h2>
+            <p>Handling data persistence and organization.</p>
+
+            <h3>Key Topics</h3>
+            <ul>
+                <li>Relational Databases (Why they exist).</li>
+                <li><strong>SQL Commands:</strong> SELECT, INSERT, UPDATE, DELETE.</li>
+                <li>Joins, Keys, and Normalization.</li>
+                <li>SQLite / MySQL basics.</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Library Management System (Python script connected to SQLite).</p>
+        </div>
+
+        <!-- Slide 8: Month 7 -->
+        <div class="slide" id="slide-8">
+            <h2>Month 7: Web Development Basics</h2>
+            <p>Understanding the Client-Server model and frontend.</p>
+
+            <h3>Key Topics</h3>
+            <div>
+                <span class="tag">HTML5 Structure</span>
+                <span class="tag">CSS Styling</span>
+                <span class="tag">Basic JavaScript</span>
+                <span class="tag">HTTP Request/Response</span>
+            </div>
+
+            <h3>Exercises</h3>
+            <ul>
+                <li>Build simple static pages with forms.</li>
+                <li>Read MDN Web Docs.</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Personal Portfolio Website (Host it on GitHub Pages).</p>
+        </div>
+
+        <!-- Slide 9: Month 8 -->
+        <div class="slide" id="slide-9">
+            <h2>Month 8: Deepening Knowledge</h2>
+            <p>OOP, APIs, and Version Control.</p>
+
+            <h3>Key Topics</h3>
+            <ul>
+                <li><strong>OOP:</strong> Classes, Objects, Inheritance in Python.</li>
+                <li><strong>APIs:</strong> Fetching data (JSON), REST basics.</li>
+                <li><strong>Git/GitHub:</strong> Commits, Push, Pull.</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Weather App (Fetch data from a public API, display in CLI or GUI).</p>
+        </div>
+
+        <!-- Slide 10: Month 9 -->
+        <div class="slide" id="slide-10">
+            <h2>Month 9: Specialization Preview</h2>
+            <p>Explore a track before committing to a career path.</p>
+
+            <h3>Choose One Path to Explore</h3>
+            <ul>
+                <li><strong>Web Development:</strong> Backend frameworks (Django/Flask).</li>
+                <li><strong>Data Analytics:</strong> Pandas, Matplotlib.</li>
+                <li><strong>Cybersecurity:</strong> Network scanning, basic ethical hacking.</li>
+                <li><strong>App Dev:</strong> Basics of Android/Flutter.</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Build one small project in your chosen field (e.g., A simple Blog or Data Visualization).</p>
+        </div>
+
+        <!-- Slide 11: Month 10 -->
+        <div class="slide" id="slide-11">
+            <h2>Month 10: The Major Project</h2>
+            <p>Spend 4-6 weeks building something substantial.</p>
+
+            <h3>Project Ideas</h3>
+            <ul>
+                <li>Student Portal Web App.</li>
+                <li>Inventory Management System.</li>
+                <li>Basic E-Commerce Mockup.</li>
+            </ul>
+
+            <h3>Focus Areas</h3>
+            <ul>
+                <li>Using Git branching.</li>
+                <li>Writing clean documentation (README.md).</li>
+                <li>Debugging without tutorials.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 12: Month 11 -->
+        <div class="slide" id="slide-12">
+            <h2>Month 11: Professional Skills</h2>
+            <p>Preparing for the real world.</p>
+
+            <h3>Key Topics</h3>
+            <ul>
+                <li><strong>Resume:</strong> Tailor it to your skills.</li>
+                <li><strong>LinkedIn:</strong> Network with professionals.</li>
+                <li><strong>Cloud:</strong> Intro to AWS/Render (Deployment).</li>
+                <li><strong>Agile:</strong> Basics of SDLC (Software Dev Lifecycle).</li>
+            </ul>
+
+            <h3>Mini Project</h3>
+            <p class="highlight">Deploy your Major Project (from Month 10) to the cloud (Heroku/Render/AWS).</p>
+        </div>
+
+        <!-- Slide 13: Month 12 -->
+        <div class="slide" id="slide-13">
+            <h2>Month 12: Job & Internship Prep</h2>
+            <p>Application strategy and interviews.</p>
+
+            <h3>Action Plan</h3>
+            <ul>
+                <li>Apply on Internshala, LinkedIn, Naukri, AngelList.</li>
+                <li>Look for local startups (Gomti Nagar/Hazratganj hubs).</li>
+                <li><strong>Interview Prep:</strong> Review Python, DSA basics, SQL.</li>
+            </ul>
+
+            <h3>Final Output</h3>
+            <p class="highlight">A polished PDF Portfolio + A clean GitHub profile.</p>
+        </div>
+
+        <!-- Slide 14: Weekly Routine -->
+        <div class="slide" id="slide-14">
+            <h2>Weekly Study Routine</h2>
+            <p>Consistency beats intensity. Aim for 8-12 hours/week.</p>
+
+            <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
+                <tr style="background:var(--primary-light); text-align:left;">
+                    <th style="padding:10px;">Day</th>
+                    <th style="padding:10px;">Activity</th>
+                    <th style="padding:10px;">Time</th>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Day 1</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Learn Theory (Book/Video)</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">1-2 hrs</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Day 2</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Coding Practice</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">1 hr</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Day 3</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Theory + Notes</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">1 hr</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Day 4</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Project Building</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">1-2 hrs</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Day 5</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">Revision / Extra</td>
+                    <td style="padding:10px; border-bottom:1px solid #eee;">1 hr</td>
+                </tr>
+            </table>
+        </div>
+
+         <!-- Slide 15: Tips & Local Context -->
+         <div class="slide" id="slide-15">
+            <h2>Tips for Success</h2>
+            
+            <h3>Staying Motivated</h3>
+            <ul>
+                <li>Keep a learning journal.</li>
+                <li>"Just 1 hour today" is better than 0.</li>
+                <li>Celebrate small wins (fixing a bug is a win!).</li>
+            </ul>
+
+            <h3>Standing Out (Local Context)</h3>
+            <ul>
+                <li>Attend events at local colleges (AMITY, BBDU, IIIT Lucknow).</li>
+                <li>Participate in Hackathons (Devfolio, HackerEarth).</li>
+                <li>Contribute to Open Source.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 16: End Outcome -->
+        <div class="slide" id="slide-16">
+            <h1 style="text-align: center; margin-top: 10%;">End of Year Outcome</h1>
+            
+            <div style="background: var(--primary-light); padding: 30px; border-radius: 12px; margin-top: 30px;">
+                <ul style="font-size: 1.2rem;">
+                    <li>✅ Understand computers from the ground up.</li>
+                    <li>✅ Write clean, functional Python code.</li>
+                    <li>✅ Have 5–8 projects in your portfolio.</li>
+                    <li>✅ Understand Databases, Web Basics, and APIs.</li>
+                    <li>✅ <strong>Ready to apply for Internships.</strong></li>
+                </ul>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: #777;">Keep going. You got this!</p>
+        </div>
+
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="controls">
+        <div class="nav-buttons">
+            <button id="prevBtn" onclick="changeSlide(-1)">&#8592; Prev</button>
+            <span class="progress-text" id="slideIndicator">1 / 16</span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next &#8594;</button>
+        </div>
+        
+        <select id="slideSelect" onchange="jumpToSlide()" aria-label="Jump to slide">
+            <option value="0">1. Overview</option>
+            <option value="1">2. Month 1: Hardware</option>
+            <option value="2">3. Month 2: Internet</option>
+            <option value="3">4. Month 3: Python Intro</option>
+            <option value="4">5. Month 4: Data Structures</option>
+            <option value="5">6. Month 5: Core CS</option>
+            <option value="6">7. Month 6: Databases</option>
+            <option value="7">8. Month 7: Web Basics</option>
+            <option value="8">9. Month 8: Adv Python</option>
+            <option value="9">10. Month 9: Specialization</option>
+            <option value="10">11. Month 10: Major Project</option>
+            <option value="11">12. Month 11: Pro Skills</option>
+            <option value="12">13. Month 12: Jobs</option>
+            <option value="13">14. Weekly Routine</option>
+            <option value="14">15. Tips & Tricks</option>
+            <option value="15">16. Outcome</option>
+        </select>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideIndicator = document.getElementById('slideIndicator');
+    const slideSelect = document.getElementById('slideSelect');
+
+    function updateUI() {
+        // Update Slides
+        slides.forEach((slide, index) => {
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+
+        // Update Buttons
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+
+        // Update Text & Dropdown
+        slideIndicator.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        slideSelect.value = currentSlide;
+    }
+
+    function changeSlide(direction) {
+        const newIndex = currentSlide + direction;
+        if (newIndex >= 0 && newIndex < totalSlides) {
+            currentSlide = newIndex;
+            updateUI();
+        }
+    }
+
+    function jumpToSlide() {
+        currentSlide = parseInt(slideSelect.value);
+        updateUI();
+    }
+
+    // Keyboard Navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+
+    // Initialize
+    updateUI();
+</script>
+
+</body>
+</html>
