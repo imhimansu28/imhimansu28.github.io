@@ -1,45 +1,25 @@
-![Cover Image](/assets/cover.png)
+# Himanshu Gupta — Reliability Loom Portfolio
 
-# Introduction
-Hello there! I'm Himanshu Gupta, a passionate Software Developer with 3 years of hands-on experience. My journey began with a Diploma in Computer Science, and since then, I've been on a thrilling ride in the tech world. My expertise lies in crafting both static and dynamic websites, utilizing the power of Python and the Django framework. I take immense pride in delivering top-notch solutions, prioritizing client satisfaction at every step. As a young and inquisitive developer, I thrive on embracing cutting-edge technologies, constantly pushing the boundaries, and expanding my skill set.
+A no-build personal portfolio made with semantic HTML, plain CSS, Alpine.js, and vanilla JavaScript.
 
-## Personal Details
-- 🎂 Birthday: December 28, 2000
-- 🌐 Website: [imhimansu28.github.io](https://imhimansu28.github.io)
-- 📧 E-mail: [webdevhimanshu@gmail.com](mailto:webdevhimanshu@gmail.com)
-- 🏡 Hometown: Lucknow, Uttar Pradesh
-- 🎓 Degree: Diploma in Computer Science
+## Run locally
 
+```bash
+python3 serve.py
+```
 
-## Work and Experience
+Then open `http://127.0.0.1:8000`. The development server disables browser caching so CSS and JavaScript changes are always reflected after a normal refresh.
 
-### Mittal Analytics Co. - Software Developer
-- **Period:** April 2022 - Present
-- A reputable company specializing in data analytics solutions.
-- Responsibilities include: Frontend and Backend Development, Database Management, and collaborating on various projects to deliver robust software solutions.
+If macOS **Reduce Motion** is enabled but you want the full portfolio transitions, open `http://127.0.0.1:8000/?motion=full#home` once. The site remembers that choice for this origin. Use `?motion=system` to return to the operating-system preference.
 
-### Global-web Infotech - Web Developer
-- **Period:** August 2021 - April 2022
-- A leading Software Development Company
-- Responsibilities include: Frontend and Backend Development
+## Files
 
-### ScimoX Product - Internship Training Program
-- **Period:** January 2020 - March 2021
-- Python Django Framework
-- Completed 10 Projects during the training program
+- `index.html` — content and structure
+- `styles.css` — complete responsive visual system
+- `script.js` — reliability-loom canvas, horizontal slide deck, reveals, active navigation, and local time
+- `vendor/alpine-3.15.12.min.js` — vendored Alpine.js for offline/static use
+- `favicon.svg` — local vector favicon
+- `serve.py` — no-cache local development server
+- `Himanshu_Gupta_AI_Resume_5plus_Years.docx` — downloadable résumé
 
-## Skills
-
-- Python
-- Django Framework
-- Frontend Development
-- Backend Development
-- Database Management
-
-## Social Media & Online Presence
-
-- **GitHub:** [github.com/](https://github.com/imhimansu28)
-- **LinkedIn:** [linkedin.com/in/](https://www.linkedin.com/in/himanshu-gupta-033793188/)
-- **Twitter:** [https://twitter.com/](https://twitter.com/imhimansu28)
-- **Facebook:** [facebook.com/](https://www.facebook.com/imhimanshu28/)
-- **Instagram:** [instagram.com/](https://www.instagram.com/imhimanshu28/)
+The core portfolio remains readable without the canvas animation. Alpine.js is only used for mobile navigation and project switching. Desktop/laptop layouts translate wheel and keyboard input into full-viewport right-to-left scene transitions; smaller screens retain natural vertical scrolling so content is never cut.

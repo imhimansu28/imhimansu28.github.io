@@ -1,500 +1,840 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A passionate and dedicated Software Developer with over 1.4 years of experience in the industry. I hold a Diploma degree in Computer Science and specialize in building websites, both static and dynamic, with expertise in Python and the Django framework. My focus is on delivering high-quality solutions and ensuring my clients' satisfaction throughout the development process. As a young and curious developer, I am always eager to explore cutting-edge technologies, constantly innovating, and continuously expanding my skill set."
+      content="Portfolio of Himanshu Gupta, a Python Backend and AI Engineer in Lucknow with 5+ years of experience in Django, REST APIs, RAG, LLMs, and PostgreSQL."
     />
-    <meta name="author" content="Himanshu Gupta- Software Developer" />
-    <title>Himanshu Gupta</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
+    <meta name="author" content="Himanshu Gupta" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#f2efe7" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Himanshu Gupta Portfolio" />
+    <meta property="og:title" content="Himanshu Gupta | Python Backend & AI Engineer" />
+    <meta
+      property="og:description"
+      content="Python backend and applied AI portfolio featuring Django, REST APIs, RAG, LLMs, vector search, and PostgreSQL projects."
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-      rel="stylesheet"
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Himanshu Gupta | Python Backend & AI Engineer" />
+    <meta
+      name="twitter:description"
+      content="Python backend and applied AI portfolio featuring Django, REST APIs, RAG, LLMs, vector search, and PostgreSQL projects."
     />
-    <link href="css/styles.css" rel="stylesheet" />
+    <title>Himanshu Gupta | Python Backend &amp; AI Engineer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="me" href="https://github.com/imhimansu28" />
+    <link rel="stylesheet" href="styles.css?v=20260718-15" />
+    <script defer src="vendor/alpine-3.15.12.min.js"></script>
+    <script defer src="script.js?v=20260718-9"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Himanshu Gupta | Python Backend and AI Engineer",
+        "dateModified": "2026-07-18",
+        "inLanguage": "en-IN",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Himanshu Gupta",
+          "jobTitle": "Python Backend and AI Engineer",
+          "description": "Python Backend and AI Engineer with 5+ years of experience building Django applications, REST APIs, RAG pipelines, and AI-powered financial research tools.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lucknow",
+            "addressCountry": "IN"
+          },
+          "knowsAbout": [
+            "Python",
+            "Django",
+            "Flask",
+            "REST APIs",
+            "PostgreSQL",
+            "Large Language Models",
+            "Retrieval-Augmented Generation",
+            "Vector Search"
+          ],
+          "sameAs": ["https://github.com/imhimansu28"]
+        }
+      }
+    </script>
   </head>
 
-  <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">Himanshu Gupta</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-               <li class="nav-item">
-                <a class="nav-link" href="path.html">Learning Path</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Header-->
-      <header class="py-5">
-        <div class="container px-5 pb-5">
-          <div class="row gx-5 align-items-center">
-            <div class="col-xxl-5">
-              <!-- Header text content-->
-              <div class="text-center text-xxl-start">
-                <div
-                  class="badge bg-gradient-primary-to-secondary text-white mb-4"
-                >
-                  <div class="text-uppercase">Software - Engineer</div>
-                </div>
-                <h1 class="display-3 fw-bolder mb-2">
-                  <span class="text-gradient d-inline">Himanhu Gupta</span>
-                </h1>
+  <body
+    x-data="{ menuOpen: false }"
+    :class="{ 'menu-is-open': menuOpen }"
+    @keydown.escape.window="menuOpen = false"
+  >
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-                <div
-                  class="d-flex justify-content-md-start justify-content-sm-center align-items-center mb-3 fs-1 fw-bolder"
-                >
-                  <a
-                    href="https://github.com/imhimansu28"
-                    class="m-2 text-gradient d-inline"
-                    ><i class="text-gradient bi bi-github"></i
-                  ></a>
-                  <a
-                    href="https://www.linkedin.com/in/himanshu-gupta-033793188/"
-                    class="m-2 text-gradient d-inline"
-                  >
-                    <i class="text-gradient bi bi-linkedin"></i
-                  ></a>
-                  <a href="https://www.facebook.com/imhimanshu28/" class="m-2 text-gradient d-inline"
-                    ><i class="text-gradient bi bi-facebook"></i
-                  ></a>
-                  <a href="https://www.instagram.com/imhimanshu28/" class="m-2 text-gradient d-inline"
-                    ><i class="text-gradient bi bi-instagram"></i
-                  ></a>
-                  <a href="https://www.twitter.com/imhimansu28/" class="m-2 text-gradient d-inline"
-                    ><i class="text-gradient bi bi-x"></i
-                  ></a>
-                </div>
-                <div
-                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
-                >
-                  <a
-                    class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                    href="resume.html"
-                    >Resume</a
-                  >
-                  <a
-                    class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                    href="projects.html"
-                    >Projects</a
-                  >
-                </div>
-              </div>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgress"></span>
+    </div>
+
+    <nav class="slide-pager" aria-label="Page sections">
+      <a href="#home" data-slide-dot aria-label="01 Intro"><span>01</span></a>
+      <a href="#work" data-slide-dot aria-label="02 Selected work"><span>02</span></a>
+      <a href="#experience" data-slide-dot aria-label="03 Experience"><span>03</span></a>
+      <a href="#expertise" data-slide-dot aria-label="04 Expertise"><span>04</span></a>
+      <a href="#about" data-slide-dot aria-label="05 About"><span>05</span></a>
+      <a href="#contact" data-slide-dot aria-label="06 Contact"><span>06</span></a>
+    </nav>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">HG</span>
+          <span class="brand-copy">
+            <strong>Himanshu Gupta</strong>
+            <small>Backend × Applied AI</small>
+          </span>
+        </a>
+
+        <nav
+          class="primary-nav"
+          :class="{ 'is-open': menuOpen }"
+          aria-label="Primary navigation"
+        >
+          <a href="#work" data-nav-link @click="menuOpen = false">Work</a>
+          <a href="#experience" data-nav-link @click="menuOpen = false">Experience</a>
+          <a href="#expertise" data-nav-link @click="menuOpen = false">Expertise</a>
+          <a href="#about" data-nav-link @click="menuOpen = false">About</a>
+          <a class="nav-contact" href="#contact" data-nav-link @click="menuOpen = false">
+            Let’s talk
+            <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          :aria-label="menuOpen ? 'Close navigation' : 'Open navigation'"
+          :aria-expanded="menuOpen"
+          @click="menuOpen = !menuOpen"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero section-anchor slide-section" id="home" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="hero-role" data-reveal>Python Backend &amp; Applied AI Engineer</p>
+
+            <h1 id="hero-title" data-reveal>
+              I build reliable
+              <span>Python backends</span>
+              <em>and useful AI.</em>
+            </h1>
+
+            <p class="hero-intro" data-reveal>
+              I’m a Python Backend and AI Engineer with 5+ years of experience building APIs,
+              RAG pipelines, and AI tools for financial research.
+            </p>
+
+            <div class="hero-actions" data-reveal>
+              <a class="button button-primary" href="#work">
+                View my work
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                class="button button-secondary"
+                href="Himanshu_Gupta_AI_Resume_5plus_Years.docx"
+                download
+              >
+                Download résumé (DOCX)
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
-            <div class="col-xxl-7">
-              <!-- Header profile picture-->
-              <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                <div class="profile bg-gradient-secondary-to-primary">
-                  <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
-                  <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                  <img
-                    class="profile-img"
-                    src="assets/profile-3.png"
-                    alt="..."
-                  />
-                  <div class="dots-1">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-2">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-3">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-4">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                </div>
+
+            <dl class="hero-proof" data-reveal>
+              <div>
+                <dt>5+</dt>
+                <dd>Years building<br />Python systems</dd>
               </div>
+              <div>
+                <dt>RAG</dt>
+                <dd>AI search for<br />financial documents</dd>
+              </div>
+              <div>
+                <dt>API</dt>
+                <dd>Scalable backend<br />services</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="signal-column loom-column" data-reveal>
+            <div class="loom-stage" id="loomStage">
+              <div class="loom-head">
+                <span>HG / RELIABILITY LOOM / 05</span>
+                <span class="loom-live"><i></i> TRACE RUNNING</span>
+              </div>
+
+              <canvas id="loomCanvas" aria-hidden="true"></canvas>
+              <div class="loom-fallback" aria-hidden="true"></div>
+              <div class="loom-cursor" aria-hidden="true"></div>
+
+              <div class="loom-port loom-port-input" aria-hidden="true">
+                <small>RAW INPUT</small>
+                <strong>DOCS<br />EVENTS<br />QUERIES</strong>
+              </div>
+
+              <div class="loom-gate loom-gate-retrieve" aria-hidden="true">
+                <span>01</span>
+                <div><strong>RETRIEVE</strong><small>vector + context</small></div>
+              </div>
+
+              <div class="loom-core" aria-hidden="true">
+                <span>PRODUCTION CORE</span>
+                <strong>HG/AI</strong>
+                <small><i></i> OBSERVABLE / ONLINE</small>
+              </div>
+
+              <div class="loom-gate loom-gate-verify" aria-hidden="true">
+                <span>02</span>
+                <div><strong>VERIFY</strong><small>rules + guardrails</small></div>
+              </div>
+
+              <div class="loom-port loom-port-output" aria-hidden="true">
+                <small>RELIABLE OUTPUT</small>
+                <strong>REST API<br />SIGNALS<br />DECISIONS</strong>
+              </div>
+
+              <div class="loom-metrics" aria-hidden="true">
+                <div><span>P95</span><strong id="loomLatency">84ms</strong></div>
+                <div><span>TRACE</span><strong id="loomTrace">7F3A</strong></div>
+                <div><span>STATE</span><strong>STABLE</strong></div>
+              </div>
+
+              <div class="loom-stamp" aria-hidden="true">NOT A DEMO</div>
             </div>
+            <p class="signal-caption">
+              <span aria-hidden="true">↳</span>
+              Live view of data moving through search, checks, and production APIs.
+            </p>
           </div>
         </div>
-      </header>
-      <!-- About Section-->
-      <section class="bg-light py-5">
-        <div class="container px-5">
-          <div class="row gx-5 justify-content-center">
-            <div class="col-xxl-8">
-              <div class="text-center my-5">
-                <h2 class="display-5 fw-bolder">
-                  <span class="text-gradient d-inline">About Me</span>
-                </h2>
-                <p class="text-muted">
-                  A passionate and dedicated Software Developer with over 3
-                  years of experience in the industry. I hold a Diploma degree
-                  in Computer Science and specialize in building websites, both
-                  static and dynamic, with expertise in Python and the Django
-                  framework. My focus is on delivering high-quality solutions
-                  and ensuring my clients' satisfaction throughout the
-                  development process. As a young and curious developer, I am
-                  always eager to explore cutting-edge technologies, constantly
-                  innovating, and continuously expanding my skill set.
-                </p>
+
+        <div class="container hero-footer" aria-hidden="true">
+          <span>SCROLL FOR NEXT SECTION →</span>
+          <span class="scroll-line"></span>
+          <span>LUCKNOW, INDIA · <span id="localTime">IST</span></span>
+        </div>
+
+        <div class="capability-strip" role="region" aria-label="Core capabilities">
+          <div class="capability-track">
+            <span>Python</span><i>◆</i>
+            <span>Django</span><i>◆</i>
+            <span>Flask</span><i>◆</i>
+            <span>LLM Integration</span><i>◆</i>
+            <span>Retrieval-Augmented Generation</span><i>◆</i>
+            <span>PostgreSQL</span><i>◆</i>
+            <span>Vector Search</span><i>◆</i>
+            <span>REST APIs</span><i>◆</i>
+          </div>
+        </div>
+      </section>
+
+
+      <section
+        class="work-section section-anchor slide-section"
+        id="work"
+        aria-labelledby="work-title"
+        x-data="{
+          selectedProject: 0,
+          selectProject(index) {
+            this.selectedProject = index;
+            this.$nextTick(() => this.$root.querySelectorAll('[role=tab]')[index]?.focus());
+          }
+        }"
+      >
+        <div class="container">
+          <header class="section-heading section-command section-command-dark" data-reveal>
+            <div class="section-command-bar">
+              <span class="section-command-index">01 / WORK</span>
+              <code><b aria-hidden="true">$</b> inspect <span>./github</span> <em>--limit 4</em></code>
+              <span class="section-command-status"><i aria-hidden="true"></i>VERIFIED</span>
+            </div>
+            <div class="section-command-copy">
+              <h2 id="work-title">Four projects. <span class="heading-highlight">Real working code.</span></h2>
+              <p>Selected for backend depth, complete product flows, and useful interaction design.</p>
+            </div>
+          </header>
+
+          <div class="project-switcher" data-reveal>
+            <div
+              class="project-tabs"
+              role="tablist"
+              aria-label="Selected GitHub projects"
+              @keydown.right.prevent="selectProject((selectedProject + 1) % 4)"
+              @keydown.left.prevent="selectProject((selectedProject + 3) % 4)"
+              @keydown.home.prevent="selectProject(0)"
+              @keydown.end.prevent="selectProject(3)"
+            >
+              <button
+                id="project-tab-bookmarks"
+                type="button"
+                role="tab"
+                aria-controls="project-panel-bookmarks"
+                :aria-selected="selectedProject === 0"
+                :tabindex="selectedProject === 0 ? 0 : -1"
+                :class="{ 'is-active': selectedProject === 0 }"
+                @click="selectedProject = 0"
+              >
+                <span>01</span>
+                <strong>Bookmark Manager</strong>
+                <small>Django · MySQL · JSON Import</small>
+              </button>
+              <button
+                id="project-tab-commerce"
+                type="button"
+                role="tab"
+                aria-controls="project-panel-commerce"
+                :aria-selected="selectedProject === 1"
+                :tabindex="selectedProject === 1 ? 0 : -1"
+                :class="{ 'is-active': selectedProject === 1 }"
+                @click="selectedProject = 1"
+              >
+                <span>02</span>
+                <strong>Django OnlineShop</strong>
+                <small>Catalog · Cart · Orders</small>
+              </button>
+              <button
+                id="project-tab-vim"
+                type="button"
+                role="tab"
+                aria-controls="project-panel-vim"
+                :aria-selected="selectedProject === 2"
+                :tabindex="selectedProject === 2 ? 0 : -1"
+                :class="{ 'is-active': selectedProject === 2 }"
+                @click="selectedProject = 2"
+              >
+                <span>03</span>
+                <strong>Vim Mastery</strong>
+                <small>Challenges · Practice · Progress</small>
+              </button>
+              <button
+                id="project-tab-search"
+                type="button"
+                role="tab"
+                aria-controls="project-panel-search"
+                :aria-selected="selectedProject === 3"
+                :tabindex="selectedProject === 3 ? 0 : -1"
+                :class="{ 'is-active': selectedProject === 3 }"
+                @click="selectedProject = 3"
+              >
+                <span>04</span>
+                <strong>Wikipedia Search</strong>
+                <small>Alpine.js · API · Keyboard UX</small>
+              </button>
+            </div>
+
+            <div class="project-panels">
+              <div
+                class="project-panel"
+                id="project-panel-bookmarks"
+                role="tabpanel"
+                aria-labelledby="project-tab-bookmarks"
+                x-show="selectedProject === 0"
+                x-transition.opacity.duration.250ms
+              >
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <p class="project-type">DJANGO BOOKMARK MANAGER</p>
+                    <a
+                      class="project-source"
+                      href="https://github.com/imhimansu28/upload-bookmarks"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >GitHub <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <h3>Import, organize, and find saved links.</h3>
+                  <p>
+                    A user-based Django app for managing bookmarks with JSON imports,
+                    pagination, account access, and MySQL-backed storage.
+                  </p>
+                  <ul class="project-points">
+                    <li>Bulk-create bookmarks from uploaded JSON files</li>
+                    <li>Keep each user’s saved links separated</li>
+                    <li>Paginate recent bookmarks for faster browsing</li>
+                    <li>Configure MySQL through environment variables</li>
+                  </ul>
+                  <div class="tag-list" aria-label="Technologies used">
+                    <span>Python</span><span>Django</span><span>MySQL</span><span>JSON</span>
+                  </div>
+                </div>
+                <div class="project-art project-art-bookmarks" aria-hidden="true">
+                  <div class="bookmark-browser">
+                    <div class="bookmark-toolbar">
+                      <i></i><i></i><i></i><span>BOOKMARKS / LIBRARY</span><b>24 SAVED</b>
+                    </div>
+                    <div class="bookmark-layout">
+                      <div class="bookmark-sidebar">
+                        <strong>COLLECTIONS</strong>
+                        <span class="is-selected">All links <b>24</b></span>
+                        <span>Engineering <b>09</b></span>
+                        <span>Research <b>08</b></span>
+                        <span>Tools <b>07</b></span>
+                      </div>
+                      <div class="bookmark-list">
+                        <div><i>PY</i><p><strong>Django documentation</strong><small>docs.djangoproject.com</small></p><b>↗</b></div>
+                        <div><i>AI</i><p><strong>Vector search notes</strong><small>research / retrieval</small></p><b>↗</b></div>
+                        <div><i>DB</i><p><strong>PostgreSQL guide</strong><small>database / reference</small></p><b>↗</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bookmark-import"><span>JSON IMPORT</span><strong>24 RECORDS READY</strong><i></i></div>
+                </div>
+              </div>
+
+              <div
+                class="project-panel"
+                id="project-panel-commerce"
+                role="tabpanel"
+                aria-labelledby="project-tab-commerce"
+                x-show="selectedProject === 1"
+                x-cloak
+                x-transition.opacity.duration.250ms
+              >
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <p class="project-type">DJANGO E-COMMERCE PLATFORM</p>
+                    <a
+                      class="project-source"
+                      href="https://github.com/imhimansu28/OnlineShop"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >GitHub <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <h3>A complete shopping flow from catalog to order.</h3>
+                  <p>
+                    A Django store covering products, variants, carts, account verification,
+                    payments, orders, reviews, and admin management.
+                  </p>
+                  <ul class="project-points">
+                    <li>Catalog, category search, variants, and stock</li>
+                    <li>Registration, email activation, and password reset</li>
+                    <li>Cart, checkout, payment, and order records</li>
+                    <li>Ratings, reviews, and admin workflows</li>
+                  </ul>
+                  <div class="tag-list" aria-label="Technologies used">
+                    <span>Python</span><span>Django</span><span>SQL</span><span>Bootstrap</span>
+                  </div>
+                </div>
+                <div class="project-art project-art-commerce" aria-hidden="true">
+                  <div class="commerce-nav"><span>STORE / ORDER FLOW</span><i></i><i></i></div>
+                  <div class="product-grid">
+                    <div class="product-card"><b>01</b><i></i><span>CATALOG</span></div>
+                    <div class="product-card featured"><b>02</b><i></i><span>CART</span></div>
+                    <div class="product-card"><b>03</b><i></i><span>ORDER</span></div>
+                  </div>
+                  <div class="order-chip"><span>PAYMENT</span><strong>CONFIRMED</strong></div>
+                </div>
+              </div>
+
+              <div
+                class="project-panel"
+                id="project-panel-vim"
+                role="tabpanel"
+                aria-labelledby="project-tab-vim"
+                x-show="selectedProject === 2"
+                x-cloak
+                x-transition.opacity.duration.250ms
+              >
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <p class="project-type">INTERACTIVE NEOVIM LEARNING APP</p>
+                    <a
+                      class="project-source"
+                      href="https://github.com/imhimansu28/vim-master"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >GitHub <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <h3>Learn Vim through challenges and practice.</h3>
+                  <p>
+                    A data-driven JavaScript learning app with progressive challenges,
+                    an interactive editor, flashcards, filters, and saved progress.
+                  </p>
+                  <ul class="project-points">
+                    <li>Search and filter challenges by level and topic</li>
+                    <li>Practice inside a CodeMirror-powered editor</li>
+                    <li>Save, reset, and export learning progress</li>
+                    <li>Use keyboard-friendly controls and modal flows</li>
+                  </ul>
+                  <div class="tag-list" aria-label="Technologies used">
+                    <span>JavaScript</span><span>JSON</span><span>CodeMirror</span><span>LocalStorage</span>
+                  </div>
+                </div>
+                <div class="project-art project-art-vim" aria-hidden="true">
+                  <div class="vim-window">
+                    <div class="vim-topbar"><span>NVIM MASTERY / PRACTICE</span><b>42%</b></div>
+                    <div class="vim-shell">
+                      <div class="vim-rail"><span>N</span><span>I</span><span>V</span><span>C</span></div>
+                      <div class="vim-editor">
+                        <p><i>01</i><span class="vim-keyword">const</span> skills = [</p>
+                        <p><i>02</i>&nbsp;&nbsp;<span class="vim-string">'motions'</span>,</p>
+                        <p><i>03</i>&nbsp;&nbsp;<span class="vim-string">'editing'</span>,</p>
+                        <p><i>04</i>&nbsp;&nbsp;<span class="vim-string">'navigation'</span></p>
+                        <p><i>05</i>]</p>
+                        <div class="vim-command">:practice challenge_21<span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vim-status"><span>CHALLENGE 21 / INTERMEDIATE</span><i><b></b></i><strong>READY</strong></div>
+                </div>
+              </div>
+
+              <div
+                class="project-panel"
+                id="project-panel-search"
+                role="tabpanel"
+                aria-labelledby="project-tab-search"
+                x-show="selectedProject === 3"
+                x-cloak
+                x-transition.opacity.duration.250ms
+              >
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <p class="project-type">ALPINE.JS WIKIPEDIA SEARCH</p>
+                    <a
+                      class="project-source"
+                      href="https://github.com/imhimansu28/advanced-search"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >GitHub <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <h3>Instant search with a keyboard-first flow.</h3>
+                  <p>
+                    A responsive Alpine.js interface that searches Wikipedia while handling
+                    loading, empty, error, and result-selection states.
+                  </p>
+                  <ul class="project-points">
+                    <li>Debounce queries and cancel stale requests</li>
+                    <li>Navigate results with arrow keys and Enter</li>
+                    <li>Show article images and short descriptions</li>
+                    <li>Switch between multiple visual themes</li>
+                  </ul>
+                  <div class="tag-list" aria-label="Technologies used">
+                    <span>Alpine.js</span><span>Wikipedia API</span><span>JavaScript</span><span>CSS</span>
+                  </div>
+                </div>
+                <div class="project-art project-art-search" aria-hidden="true">
+                  <div class="search-sphere"><i></i><i></i><b></b></div>
+                  <div class="search-window">
+                    <div class="search-window-head"><span>WIKIPEDIA / INSTANT</span><b>OCEANIC</b></div>
+                    <div class="search-query"><i></i><span>python django</span><b>⌘ K</b></div>
+                    <div class="search-results">
+                      <div class="is-selected"><i>01</i><p><strong>Django</strong><small>Python web framework</small></p><b>↗</b></div>
+                      <div><i>02</i><p><strong>Python</strong><small>Programming language</small></p><b>↗</b></div>
+                      <div><i>03</i><p><strong>Web framework</strong><small>Software framework</small></p><b>↗</b></div>
+                    </div>
+                  </div>
+                  <div class="search-state"><i></i><span>10 RESULTS · 84MS</span></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div
-          class="row align-items-center justify-content-between flex-column flex-sm-row"
-        >
-          <div class="text-center">
-            <div class="small m-0">Copyright &copy; Himanshu Gupta - 2023</div>
+
+      <section class="experience-section section-anchor slide-section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section-heading section-command" data-reveal>
+            <div class="section-command-bar">
+              <span class="section-command-index">02 / EXPERIENCE</span>
+              <code><b aria-hidden="true">$</b> trace <span>./career</span> <em>--to production-ai</em></code>
+              <span class="section-command-status"><i aria-hidden="true"></i>ACTIVE</span>
+            </div>
+            <div class="section-command-copy">
+              <h2 id="experience-title">From Python foundations to <span class="heading-highlight">production AI.</span></h2>
+              <p>A 5+ year path through web apps, backend systems, and AI-powered financial research.</p>
+            </div>
+          </header>
+
+          <div class="career-system" data-reveal>
+            <div class="career-grid" aria-hidden="true"></div>
+            <div class="career-pulse" aria-hidden="true"><i></i></div>
+
+            <article class="career-current">
+              <header class="career-current-head">
+                <div>
+                  <span class="career-kicker">ACTIVE TRACE / 03</span>
+                  <p class="career-company">Global-Web Development</p>
+                </div>
+                <div class="career-period">
+                  <time datetime="2021-08">AUG 2021 — PRESENT</time>
+                  <span>Current</span>
+                </div>
+              </header>
+
+              <div class="career-role-row">
+                <div>
+                  <h3>Software Engineer</h3>
+                  <p>
+                    I build Python backends, REST APIs, and AI tools for financial research using
+                    Django, Flask, PostgreSQL, LLMs, RAG, and vector search.
+                  </p>
+                </div>
+                <div class="career-duration" aria-label="More than five years of engineering experience">
+                  <strong>5+</strong>
+                  <span>years of<br />engineering</span>
+                </div>
+              </div>
+
+              <div class="career-public-proof">
+                <span>PUBLIC BUILD LOG / GITHUB</span>
+                <a href="#work">
+                  <strong>4 selected repositories</strong>
+                  <small>Bookmark Manager · OnlineShop · Vim Mastery · Wikipedia Search</small>
+                  <b aria-hidden="true">←</b>
+                </a>
+              </div>
+
+              <div class="career-impact-grid" aria-label="Current role responsibilities">
+                <div class="career-impact">
+                  <span>01</span>
+                  <strong>Backend &amp; APIs</strong>
+                  <p>Design and maintain production services and REST workflows.</p>
+                </div>
+                <div class="career-impact">
+                  <span>02</span>
+                  <strong>RAG pipelines</strong>
+                  <p>Search filings, reports, presentations, and earnings content.</p>
+                </div>
+                <div class="career-impact">
+                  <span>03</span>
+                  <strong>Insight extraction</strong>
+                  <p>Turn long documents into useful KPIs and business signals.</p>
+                </div>
+                <div class="career-impact">
+                  <span>04</span>
+                  <strong>Production quality</strong>
+                  <p>Improve speed, reliability, observability, and LLM cost.</p>
+                </div>
+              </div>
+            </article>
+
+            <div class="career-history">
+              <div class="career-history-head" aria-hidden="true">
+                <span>CAREER / SIGNAL LOG</span>
+                <span>2016 → NOW</span>
+              </div>
+
+              <article class="career-stop">
+                <header>
+                  <span>TRACE / 02</span>
+                  <time datetime="2020">2020 — 2021</time>
+                </header>
+                <p class="career-company">Scimox</p>
+                <h3>Python / Django Intern</h3>
+                <p>
+                  Built Django and Flask web apps with CRUD features, user authentication,
+                  database connections, and responsive interfaces.
+                </p>
+                <ul class="career-tags" aria-label="Internship technologies">
+                  <li>Python</li><li>Django</li><li>Flask</li><li>SQL</li>
+                </ul>
+              </article>
+
+              <article class="career-stop career-stop-education">
+                <header>
+                  <span>TRACE / 01</span>
+                  <time datetime="2016">2016 — 2019</time>
+                </header>
+                <p class="career-company">Government Polytechnic, Unnao</p>
+                <h3>Diploma in Computer Science &amp; Engineering</h3>
+                <ul class="career-certifications" aria-label="Certifications">
+                  <li>NPTEL · Data Structures &amp; Algorithms using Python</li>
+                  <li>HackerRank · Problem Solving</li>
+                </ul>
+              </article>
+
+              <a class="career-resume" href="Himanshu_Gupta_AI_Resume_5plus_Years.docx" download>
+                <span><small>FULL PROFILE</small>Download résumé (DOCX)</span>
+                <b aria-hidden="true">↗</b>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS->
+      </section>
+
+      <section class="expertise-section section-anchor slide-section" id="expertise" aria-labelledby="expertise-title">
+        <div class="container">
+          <header class="section-heading section-command expertise-heading" data-reveal>
+            <div class="section-command-bar">
+              <span class="section-command-index">03 / EXPERTISE</span>
+              <code><b aria-hidden="true">$</b> map <span>./stack</span> <em>--layers backend,data,ai</em></code>
+              <span class="section-command-status"><i aria-hidden="true"></i>CONNECTED</span>
+            </div>
+            <div class="section-command-copy">
+              <h2 id="expertise-title">One stack. <span class="heading-highlight">Three connected systems.</span></h2>
+              <p>Backend, data, and AI designed as one reliable production flow.</p>
+            </div>
+          </header>
+
+          <div class="expertise-architecture" data-reveal>
+            <div class="architecture-stage">
+              <div class="architecture-grid" aria-hidden="true"></div>
+              <div class="architecture-connector connector-horizontal" aria-hidden="true"><i></i></div>
+              <div class="architecture-connector connector-vertical" aria-hidden="true"><i></i></div>
+
+              <article class="architecture-node architecture-backend">
+                <header><span>01 / BUILD</span><b>CORE</b></header>
+                <h3>Backend &amp; APIs</h3>
+                <p>
+                  Clear services, secure flows, and practical data models that are easy to test,
+                  maintain, and scale.
+                </p>
+                <ul class="architecture-skills">
+                  <li>Python</li><li>Django</li><li>Flask</li><li>REST APIs</li>
+                </ul>
+              </article>
+
+              <article class="architecture-node architecture-data">
+                <header><span>02 / RETRIEVE</span><b>DATA</b></header>
+                <h3>Databases &amp; search</h3>
+                <p>
+                  Relational storage and retrieval pipelines that keep documents, metrics, and
+                  application data easy to find.
+                </p>
+                <ul class="architecture-skills">
+                  <li>PostgreSQL</li><li>SQLite</li><li>Vector DBs</li><li>Data Pipelines</li>
+                </ul>
+              </article>
+
+              <article class="architecture-node architecture-ai">
+                <header><span>03 / REASON</span><b>APPLIED AI</b></header>
+                <div class="ai-orbit" aria-hidden="true"><i></i><i></i><b></b><span></span></div>
+                <h3>LLM &amp; RAG systems</h3>
+                <p>
+                  AI workflows grounded in useful context, with answer quality, speed,
+                  reliability, and cost measured from the start.
+                </p>
+                <ul class="architecture-skills">
+                  <li>LLM APIs</li><li>RAG</li><li>Embeddings</li><li>Prompt Engineering</li>
+                </ul>
+              </article>
+
+              <div class="architecture-core" aria-hidden="true">
+                <span>HG</span>
+                <small>PRODUCTION<br />FLOW</small>
+              </div>
+            </div>
+
+            <aside class="engineering-method">
+              <span class="method-kicker">OPERATING MODEL / 04</span>
+              <h3>Reliable software is a sequence, not a shortcut.</h3>
+              <p>
+                Start with the user’s decision, keep data traceable, make errors visible, and
+                improve the system with real measurements.
+              </p>
+              <ol class="method-steps">
+                <li><span>01</span><div><strong>Understand</strong><small>Define the real problem and useful outcome.</small></div></li>
+                <li><span>02</span><div><strong>Build</strong><small>Create the smallest dependable solution.</small></div></li>
+                <li><span>03</span><div><strong>Measure</strong><small>Track quality, speed, failures, and cost.</small></div></li>
+              </ol>
+              <div class="method-readout" aria-label="Engineering priorities">
+                <span>QUALITY</span><i></i><span>LATENCY</span><i></i><span>COST</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section section-anchor slide-section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-visual" data-reveal aria-hidden="true">
+            <div class="about-orbit about-orbit-outer"></div>
+            <div class="about-orbit about-orbit-inner"></div>
+            <div class="about-core">
+              <span>HG</span>
+              <small>BUILD / LEARN / SHIP</small>
+            </div>
+            <span class="about-label label-python">PYTHON</span>
+            <span class="about-label label-data">DATA</span>
+            <span class="about-label label-ai">AI</span>
+            <span class="about-label label-api">API</span>
+          </div>
+
+          <div class="about-copy" data-reveal>
+            <header class="section-command about-command">
+              <div class="section-command-bar">
+                <span class="section-command-index">04 / ABOUT</span>
+                <code><b aria-hidden="true">$</b> whoami <em>--focus backend+ai</em></code>
+                <span class="section-command-status"><i aria-hidden="true"></i>AVAILABLE</span>
+              </div>
+              <div class="section-command-copy section-command-copy-single">
+                <h2 id="about-title">I build AI on a <span class="heading-highlight">strong backend foundation.</span></h2>
+              </div>
+            </header>
+            <p class="about-lead">
+              I’m Himanshu Gupta, a Python Backend and AI Engineer based in Lucknow, India.
+              I turn complex documents, business rules, and data into software people can trust.
+            </p>
+            <p>
+              I started with Python web development and now use that experience to build practical
+              AI products. I focus on clear APIs, traceable data, reliable search, and useful
+              results—not demos that only look impressive.
+            </p>
+            <div class="about-meta">
+              <div><span>BASE</span><strong>Lucknow, India</strong></div>
+              <div><span>FOCUS</span><strong>Backend + Applied AI</strong></div>
+              <div><span>WORKING WITH</span><strong>Python, Django, LLMs</strong></div>
+              <div><span>STATUS</span><strong class="status-text">Open to opportunities</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-anchor slide-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <header class="section-command contact-command" data-reveal>
+            <div class="section-command-bar">
+              <span class="section-command-index">05 / CONTACT</span>
+              <code><b aria-hidden="true">$</b> connect <span>./himanshu</span> <em>--mode meaningful-work</em></code>
+              <span class="section-command-status"><i aria-hidden="true"></i>OPEN</span>
+            </div>
+            <div class="section-command-copy">
+              <h2 id="contact-title">Have a <span class="heading-highlight">hard problem?</span></h2>
+              <p>I’m open to backend engineering and applied AI roles, projects, and product conversations.</p>
+            </div>
+          </header>
+          <a
+            class="contact-email"
+            href="mailto:imhimansu28@gmail.com"
+            aria-label="Email Himanshu Gupta at imhimansu28@gmail.com"
+            data-reveal
+          >
+            imhimansu28@gmail.com
+            <span aria-hidden="true">↗</span>
+          </a>
+          <div class="contact-footer contact-footer-links" data-reveal>
+            <div class="contact-links">
+              <a href="https://github.com/imhimansu28" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+              <a href="Himanshu_Gupta_AI_Resume_5plus_Years.docx" download>Download résumé <span aria-hidden="true">↓</span></a>
+              <a href="#home">Back to home <span aria-hidden="true">↑</span></a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="container">
+            <span>© <span id="currentYear">2026</span> Himanshu Gupta</span>
+            <span>Designed as a Reliability Loom</span>
+            <span>HTML · CSS · Alpine · Vanilla JS</span>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+
+    <div class="mobile-overlay" x-cloak x-show="menuOpen" x-transition.opacity @click="menuOpen = false"></div>
   </body>
 </html>
