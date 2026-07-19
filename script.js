@@ -386,8 +386,8 @@
       this.canvas = canvas;
       this.stage = stage;
       this.ctx = canvas.getContext("2d", { alpha: true });
-      this.latency = document.getElementById("loomLatency");
-      this.trace = document.getElementById("loomTrace");
+      this.step = document.getElementById("loomStep");
+      this.iteration = document.getElementById("loomIteration");
       this.width = 0;
       this.height = 0;
       this.dpr = 1;
@@ -570,10 +570,10 @@
 
       ctx.font = `${Math.max(7, width * 0.013)}px ${getComputedStyle(document.documentElement).getPropertyValue("--mono")}`;
       ctx.fillStyle = "rgba(23, 24, 20, 0.36)";
-      ctx.fillText("INGEST", width * 0.12, height * 0.16);
-      ctx.fillText("RETRIEVAL", width * 0.32, height * 0.86);
-      ctx.fillText("VERIFY", width * 0.59, height * 0.16);
-      ctx.fillText("SERVE", width * 0.79, height * 0.86);
+      ctx.fillText("FRAME", width * 0.12, height * 0.16);
+      ctx.fillText("DESIGN", width * 0.32, height * 0.86);
+      ctx.fillText("TEST", width * 0.59, height * 0.16);
+      ctx.fillText("SHIP", width * 0.79, height * 0.86);
       ctx.restore();
     }
 
@@ -693,8 +693,9 @@
       const tick = Math.floor(motionTime * 1.35);
       if (tick === this.lastMetricTick) return;
       this.lastMetricTick = tick;
-      if (this.latency) this.latency.textContent = `${78 + ((tick * 7) % 17)}ms`;
-      if (this.trace) this.trace.textContent = ((0x7f3a + tick * 53) % 0xffff).toString(16).toUpperCase().padStart(4, "0");
+      const steps = ["FRAME", "DESIGN", "BUILD", "TEST"];
+      if (this.step) this.step.textContent = steps[tick % steps.length];
+      if (this.iteration) this.iteration.textContent = String((tick % 9) + 1).padStart(2, "0");
     }
 
     draw(time) {
