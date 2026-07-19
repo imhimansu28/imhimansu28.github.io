@@ -19,6 +19,7 @@ If macOS **Reduce Motion** is enabled but you want the full portfolio transition
 - `script.js` — reliability-loom canvas, horizontal slide deck, reveals, active navigation, and local time
 - `vendor/alpine-3.15.12.min.js` — vendored Alpine.js for offline/static use
 - `favicon.svg` — local vector favicon
+- `social-preview.png` — 1200 × 630 social sharing preview
 - `serve.py` — no-cache local development server
 - `Himanshu_Gupta_AI_Resume_5plus_Years.docx` — downloadable résumé
 
