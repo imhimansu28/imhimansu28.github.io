@@ -1,5 +1,5 @@
 /* ------------------------------
-   Reliability Loom — design tokens
+   Python Backend Portfolio — design tokens
    ------------------------------ */
 :root {
   --bg: #f2efe7;
@@ -2244,7 +2244,8 @@ a:focus-visible {
   grid-template-columns: 150px minmax(0, 1fr);
   gap: 18px;
   align-items: center;
-  margin-bottom: clamp(18px, 3vh, 28px);
+  margin-top: auto;
+  margin-bottom: 0;
   padding: 12px 0;
   border-top: 1px solid rgba(245, 241, 232, 0.22);
   border-bottom: 1px solid rgba(245, 241, 232, 0.22);
@@ -2286,43 +2287,10 @@ a:focus-visible {
   transform: translateY(-50%);
 }
 
-.career-impact-grid {
-  display: grid;
-  min-height: 0;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: auto;
-  border-top: 1px solid rgba(245, 241, 232, 0.22);
-  border-left: 1px solid rgba(245, 241, 232, 0.22);
-}
 
-.career-impact {
-  position: relative;
-  min-width: 0;
-  padding: 19px 20px 20px;
-  border-right: 1px solid rgba(245, 241, 232, 0.22);
-  border-bottom: 1px solid rgba(245, 241, 232, 0.22);
-}
 
-.career-impact > span {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--accent-soft);
-  font-family: var(--mono);
-  font-size: 0.52rem;
-}
 
-.career-impact strong {
-  display: block;
-  margin-bottom: 7px;
-  font-size: 0.88rem;
-}
 
-.career-impact p {
-  margin: 0;
-  color: var(--dark-muted);
-  font-size: 0.72rem;
-  line-height: 1.45;
-}
 
 .career-history {
   position: relative;
@@ -4459,7 +4427,7 @@ a:focus-visible {
   .experience-section .career-public-proof {
     grid-template-columns: 125px minmax(0, 1fr);
     gap: 12px;
-    margin-bottom: clamp(10px, 1.8vh, 16px);
+    margin-bottom: 0;
     padding: 8px 0;
   }
 
@@ -4471,23 +4439,9 @@ a:focus-visible {
     font-size: 0.57rem;
   }
 
-  .experience-section .career-impact {
-    padding: clamp(10px, 1.3vw, 16px);
-  }
 
-  .experience-section .career-impact > span {
-    margin-bottom: 7px;
-  }
 
-  .experience-section .career-impact strong {
-    margin-bottom: 4px;
-    font-size: clamp(0.7rem, 0.82vw, 0.82rem);
-  }
 
-  .experience-section .career-impact p {
-    font-size: clamp(0.66rem, 0.7vw, 0.72rem);
-    line-height: 1.36;
-  }
 
   .experience-section .career-history-head {
     padding: 10px 15px;
@@ -4626,7 +4580,7 @@ a:focus-visible {
 
   .experience-section .career-public-proof {
     grid-template-columns: 110px minmax(0, 1fr);
-    margin-bottom: 7px;
+    margin-bottom: 0;
     padding: 5px 0;
   }
 
@@ -4638,9 +4592,6 @@ a:focus-visible {
     white-space: nowrap;
   }
 
-  .experience-section .career-impact {
-    padding-block: 8px;
-  }
 
   .experience-section .career-stop .career-company {
     margin-top: 9px;
@@ -4786,17 +4737,8 @@ a:focus-visible {
     font-size: 0.68rem;
   }
 
-  .career-impact-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
 
-  .career-impact {
-    padding: 17px;
-  }
 
-  .career-impact p {
-    font-size: 0.76rem;
-  }
 
   .career-stop {
     min-height: 0;
@@ -5248,10 +5190,6 @@ a:focus-visible {
     line-height: 1.4;
   }
 
-  .experience-section .career-impact p {
-    font-size: clamp(0.79rem, 0.84vw, 0.86rem);
-    line-height: 1.42;
-  }
 
   .experience-section .career-stop > p:not(.career-company) {
     font-size: clamp(0.8rem, 0.85vw, 0.88rem);
@@ -5331,7 +5269,6 @@ a:focus-visible {
     line-height: 1.45;
   }
 
-  .career-impact p,
   .career-stop > p:not(.career-company) {
     font-size: 0.92rem;
     line-height: 1.55;
@@ -5428,15 +5365,7 @@ a:focus-visible {
   box-shadow: 2px 2px 0 rgba(23, 24, 20, 0.08);
 }
 
-.career-impact {
-  transition: background-color 220ms ease, transform 220ms var(--ease);
-}
 
-.career-impact:hover {
-  z-index: 2;
-  background: rgba(217, 255, 87, 0.055);
-  transform: translateY(-2px);
-}
 
 @media (min-width: 960px) and (min-height: 650px) {
   .hero-grid {
@@ -5527,9 +5456,6 @@ a:focus-visible {
     font-size: 0.48rem;
   }
 
-  .experience-section .career-impact > span {
-    letter-spacing: 0.045em;
-  }
 }
 
 @media (min-width: 960px) and (min-height: 650px) and (max-height: 735px) {
@@ -5684,3 +5610,9 @@ a:focus-visible {
   }
 }
 
+
+@media (min-width: 960px) {
+  .about-copy > p {
+    width: calc(100% - 52px);
+  }
+}

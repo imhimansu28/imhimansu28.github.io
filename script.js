@@ -570,10 +570,10 @@
 
       ctx.font = `${Math.max(7, width * 0.013)}px ${getComputedStyle(document.documentElement).getPropertyValue("--mono")}`;
       ctx.fillStyle = "rgba(23, 24, 20, 0.36)";
-      ctx.fillText("FRAME", width * 0.12, height * 0.16);
-      ctx.fillText("DESIGN", width * 0.32, height * 0.86);
+      ctx.fillText("PLAN", width * 0.12, height * 0.16);
+      ctx.fillText("BUILD", width * 0.32, height * 0.86);
       ctx.fillText("TEST", width * 0.59, height * 0.16);
-      ctx.fillText("SHIP", width * 0.79, height * 0.86);
+      ctx.fillText("IMPROVE", width * 0.79, height * 0.86);
       ctx.restore();
     }
 
@@ -693,7 +693,7 @@
       const tick = Math.floor(motionTime * 1.35);
       if (tick === this.lastMetricTick) return;
       this.lastMetricTick = tick;
-      const steps = ["FRAME", "DESIGN", "BUILD", "TEST"];
+      const steps = ["PLAN", "BUILD", "TEST", "IMPROVE"];
       if (this.step) this.step.textContent = steps[tick % steps.length];
       if (this.iteration) this.iteration.textContent = String((tick % 9) + 1).padStart(2, "0");
     }

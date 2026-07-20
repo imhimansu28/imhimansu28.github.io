@@ -1,4 +1,4 @@
-# Himanshu Gupta — Reliability Loom Portfolio
+# Himanshu Gupta — Python Backend Portfolio
 
 A no-build personal portfolio made with semantic HTML, plain CSS, Alpine.js, and vanilla JavaScript.
 
@@ -16,11 +16,11 @@ If macOS **Reduce Motion** is enabled but you want the full portfolio transition
 
 - `index.html` — content and structure
 - `styles.css` — complete responsive visual system
-- `script.js` — reliability-loom canvas, horizontal slide deck, reveals, active navigation, and local time
+- `script.js` — backend-workflow canvas, horizontal slide deck, reveals, active navigation, and local time
 - `vendor/alpine-3.15.12.min.js` — vendored Alpine.js for offline/static use
 - `favicon.svg` — local vector favicon
 - `social-preview.png` — 1200 × 630 social sharing preview
 - `serve.py` — no-cache local development server
-- `Himanshu_Gupta_AI_Resume_5plus_Years.docx` — downloadable résumé
+- `Himanshu_Gupta_Python_Backend_Resume.docx` — downloadable résumé
 
 The core portfolio remains readable without the canvas animation. Alpine.js is only used for mobile navigation and project switching. Desktop/laptop layouts translate wheel and keyboard input into full-viewport right-to-left scene transitions; smaller screens retain natural vertical scrolling so content is never cut.
